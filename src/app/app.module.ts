@@ -3,18 +3,36 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { RecipeBookAppComponent } from "./recipe-book.component";
+import { HeaderComponent } from "./header.component";
+import { DropdownDirective } from "./dropdown.directive";
+import { ShoppingListAddComponent } from "./shopping-list/shopping-list-add.component";
+import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
+import { RecipesComponent } from "./recipes/recipes.component";
+import { RecipeListComponent } from "./recipes/recipe-list/recipe-list.component";
+import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
+import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item.component";
+import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { RecipeService } from "./recipes/recipe.service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    RecipeBookAppComponent,
+    HeaderComponent,
+    DropdownDirective,
+    ShoppingListAddComponent,
+    ShoppingListComponent,
+    RecipesComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ShoppingListService, RecipeService],
+  bootstrap: [RecipeBookAppComponent]
 })
-export class AppModule { }
+export class AppModule {}

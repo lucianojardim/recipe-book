@@ -1,10 +1,10 @@
-import { RecipeBookPage } from './app.po';
+import { CompleteGuideFinalWebpackPage } from './app.po';
 
-describe('recipe-book App', function() {
-  let page: RecipeBookPage;
+describe('complete-guide-final-webpack App', function() {
+  let page: CompleteGuideFinalWebpackPage;
 
   beforeEach(() => {
-    page = new RecipeBookPage();
+    page = new CompleteGuideFinalWebpackPage();
   });
 
   it('should display message saying app works', () => {
