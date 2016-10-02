@@ -10,7 +10,7 @@ import { ShoppingListService } from "./shopping-list.service";
 })
 export class ShoppingListComponent implements OnInit {
   items: Ingredient[] = [];
-  selectedItem: Ingredient = null;
+  selectedItem: Ingredient = null; //null or otherwise it would be undefined
 
   constructor(private sls: ShoppingListService) {}
 
